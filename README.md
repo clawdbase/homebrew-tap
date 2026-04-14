@@ -23,10 +23,12 @@ brew upgrade clawdbase/tap/clawdbase
 
 ## What next?
 
-Generate a pair token in the Clawdbase UI → **Connect a gateway**, then pair this host:
+Grab a pair token from the Clawdbase UI (single-use, 15-minute lifetime), then pair this host with the workspace:
 
 ```bash
 clawdbase gateway install --pair-token <PAIR_TOKEN>
 ```
+
+The host opens an outbound WebSocket to Clawdbase and the **Gateways** page updates itself in real time — no refresh needed.
 
 See the [agent-readable install guide](https://github.com/clawdbase/cli/blob/main/CLI_INSTALL.md) for the full onboarding flow.
