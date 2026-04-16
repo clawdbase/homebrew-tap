@@ -5,21 +5,21 @@
 class Clawdbase < Formula
   desc "Clawdbase CLI — Mission Control for OpenClaw, the managed agent gateway"
   homepage "https://github.com/clawdbase/cli"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clawdbase/cli/releases/download/v0.0.6/clawdbase_darwin_amd64.tar.gz"
-      sha256 "3b1166240c1b41c9c40756a3661be11d75fed04949d26ccd3ac8286519eb0337"
+      url "https://github.com/clawdbase/cli/releases/download/v0.0.7/clawdbase_darwin_amd64.tar.gz"
+      sha256 "eea74e31782e487a5cf2800315b3a4e8433926ad1ac278e8c984898f8d976b01"
 
       define_method(:install) do
         bin.install "clawdbase"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clawdbase/cli/releases/download/v0.0.6/clawdbase_darwin_arm64.tar.gz"
-      sha256 "34bab1a5c4527fe1da28646080cdd63365b9eada2980f85159159545c125a44a"
+      url "https://github.com/clawdbase/cli/releases/download/v0.0.7/clawdbase_darwin_arm64.tar.gz"
+      sha256 "27cc490faa4d5e41f5142733c478a9756f9a52f1007e9be975c211d8863c8bde"
 
       define_method(:install) do
         bin.install "clawdbase"
@@ -29,15 +29,15 @@ class Clawdbase < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clawdbase/cli/releases/download/v0.0.6/clawdbase_linux_amd64.tar.gz"
-      sha256 "bbe660df5945b737f0bf6539b1f9a010eef1f32e5d94b0671aa462ccb4c3dfdd"
+      url "https://github.com/clawdbase/cli/releases/download/v0.0.7/clawdbase_linux_amd64.tar.gz"
+      sha256 "3fb75d9d3134b88080d66fb9013f5aa664028a061f9eab91432e1f2da53ef8d1"
       define_method(:install) do
         bin.install "clawdbase"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clawdbase/cli/releases/download/v0.0.6/clawdbase_linux_arm64.tar.gz"
-      sha256 "c8a916f0a9c5207529ab00fa195a1dd65c6ed103c887ca4d38242de27e4ddb2b"
+      url "https://github.com/clawdbase/cli/releases/download/v0.0.7/clawdbase_linux_arm64.tar.gz"
+      sha256 "84f637662e317229b6aa2268007228cd6980a0278281509dd32c1d8bbd581d46"
       define_method(:install) do
         bin.install "clawdbase"
       end
